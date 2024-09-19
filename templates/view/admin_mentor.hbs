@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mentor_cards.css" rel="stylesheet">
+    <link href="../mentor_verify/cv.css" rel="stylesheet">
+</head>
+<body>
+    <div id="cv_view">
+         <i class="fa-solid fa-x close_cv_view" onclick="close_cv_view()"></i>
+       </div>
+    {{>sidebar}}
+    <div class="content" id="content">
+         {{>navbar}}
+       {{>cv}}
+       <div id="popup">
+       <div class="inner">
+         <i class="fa-solid fa-x close_popup" onclick="close_popup()"></i>
+        <h2>One attachment found</h2>
+        <button onclick="view_cv()">View</button>
+        <button onclick="download_cv()">Download</button>   
+       </div>
+
+       </div>
+      
+</div>
+
+
+          
+    <script>
+        var content = document.getElementById("content");
+        const mentor_info = "{{mentor_info}}";
+       console.log(mentor_info)
+        const parse_info = JSON.parse(mentor_info.replaceAll("&quot;",'"'));
+         console.log(parse_info)
+        parse_info.forEach(data => {
+            var card_container = document.createElement("div");
+            var pro = document.createElement("span");
+            var img = document.createElement("img");
+            var name = document.createElement("h3");
+            var city = document.createElement("h6");
+            var para = document.createElement("p");
+            var btn_div = document.createElement("div");
+            var button_message = document.createElement("button");
+            var button_open = document.createElement("button");
+            var skills = document.createElement("div");
+            var skills_heading = document.createElement("h6");
+            var skills_ul = document.createElement("ul");
+            
+            ////////////////////DATA IN INNER/////////////////////////////
+            pro.innerHTML = data.mentor_experience;
+            img.src = data.mentor_profile;
+            name.innerHTML = data.mentor_username;
+            city.innerHTML = "karachi";
+            para.innerHTML = (data.mentor_about).substring(0, 30)+"...";
+            button_message.innerHTML = "Message"
+            button_open.innerHTML = "Open"
+            skills_heading.innerHTML = "Skills";
+
+
+            /////////////////////DATA IN INNR ///////////////////////
+            ///////////////////CLASSES FOR DATA///////////////////////////
+            card_container.className = "card-container";
+            pro.className = "pro";
+            img.className = "round"
+            btn_div.className = "buttons";
+            button_message.className = "primary";
+            button_open.className = "primary ghost";
+            button_open.setAttribute("id",data._id);
+            skills.className = "skills";
+            ///////////////////CLASSES FOR DATA////////////////////////
+            ////////////////ACTIONS ON BUTTON CLICK/////////////////////////////
+            button_open.addEventListener("click",function(){ 
+                 var cv = document.getElementById("cv");
+                cv.style.display = "block";
+                content.querySelectorAll(".card-container").forEach(elem => {
+                    elem.style.display = "none"
+                    })
+                    ///////////WORK////////////////////////
+                     var username = document.getElementById("username");
+                     var img_profile = document.getElementById("img_profile");
+                     var attachments = document.getElementById("attachments");
+                var username1 = document.getElementById("username1");
+                var email = document.getElementById("email");
+                var phone = document.getElementById("phone");
+                var skills_inner = document.getElementById("skills");
+                username.innerHTML = data.mentor_username;
+                username1.innerHTML = data.mentor_username;
+                email.innerHTML = data.mentor_email;
+                phone.innerHTML = data.mentor_phone;
+                img_profile.src = data.mentor_profile;
+                console.log(data)
+                if(data.mentor_attachments == null || data.mentor_attachments == "" || data.mentor_attachments == undefined){
+                  attachments.innerHTML = "No attachments Found";
+                }else{
+                    attachments.innerHTML = "Attachment found";
+                    attachments.addEventListener("click",function(){
+                        var popup = document.getElementById("popup");
+                        popup.setAttribute("attachments",data.mentor_attachments);
+                        popup.style.display = "block";
+                    })
+                }
+
+               skills_inner.innerHTML= "";
+                var all_skills = data.mentor_skills.split(",").forEach(elem => {
+                    var li = document.createElement("li");
+                    li.innerHTML = elem;
+                    skills_inner.appendChild(li);
+                })
+                var data1 = JSON.stringify({email:data.mentor_email});
+                console.log(data1)
+                fetch("/admin/get_other_info",{
+                    method: "POST",
+                      headers:{
+        "Accept": "application/json, text/plain, */*",
+        "Content-type": "application/json; charset = UTF-8"
+    },
+                    body: data1
+                }).then(res => {
+                    return res.text()
+                }).then(data => {
+                    var age = document.getElementById("age");
+                    var parse_data = JSON.parse(data);
+                    age.innerHTML=  parse_data.age;
+                })
+              
+        })
+            ////////////////ACTIONS ON BUTTON CLICK/////////////////////////////
+
+            content.appendChild(card_container)
+            card_container.appendChild(pro)
+            card_container.appendChild(img)
+            card_container.appendChild(name)
+            card_container.appendChild(city)
+            card_container.appendChild(para)
+            card_container.appendChild(para)
+            card_container.appendChild(btn_div)
+            btn_div.appendChild(button_message)
+            btn_div.appendChild(button_open)
+            card_container.appendChild(skills)
+            skills.appendChild(skills_heading)
+            skills.appendChild(skills_ul);
+            data.mentor_skills.split(",").forEach(data => {
+                var skills_li = document.createElement("li");
+                skills_li.innerHTML = data;
+                skills_ul.appendChild(skills_li)
+            })
+
+        })
+        function close_popup(){
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+        function download_cv(){
+            var popup = document.getElementById("popup");
+            var attachments = popup.getAttribute("attachments");
+            fetch(attachments) .then( res => res.blob() )
+  .then( blob => {
+    var file = window.URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = file;
+    a.download = "cv";
+    a.click();
+  });
+        }
+        function view_cv(){
+             var popup = document.getElementById("popup");
+             var cv_view = document.getElementById("cv_view");
+            var attachments = popup.getAttribute("attachments");
+            var img = document.createElement("img");
+            img.src  = attachments;
+            img.className = "cv_image";
+            cv_view.style.display = "flex"
+            cv_view.appendChild(img)
+            popup.style.display = "none";
+
+        }
+        function close_cv_view(){
+             var cv_view = document.getElementById("cv_view");
+             cv_view.style.display = "none";
+
+        }
+        function approve_user(ele){
+            var i = 0;
+            var z = setInterval(function(){
+                switch(i){
+                case 0 : 
+                ele.innerHTML = "Approving.";
+                i++
+                break;
+                case 1:
+                 ele.innerHTML = "Approving..";
+                i++
+                 break;
+                case 2:
+                 ele.innerHTML = "Approving...";
+                i=0;
+                break;
+                }
+            },1000)
+             var email = document.getElementById("email");
+             var useremail = email.innerHTML;
+            var email_info = JSON.stringify({email : useremail})
+            fetch("/admin/approve_mentor",{
+                  method: "POST",
+                      headers:{
+        "Accept": "application/json, text/plain, */*",
+        "Content-type": "application/json; charset = UTF-8"
+    },
+    body:email_info
+            }).then(res => {
+                return res.text()
+            }).then(data => {
+                clearInterval(z);
+                if(data == "verified"){
+                ele.innerHTML = "Verified<i class='fa-solid fa-check verified'></i>";
+                }else{
+                    ele.innerHTML = "Error X";
+                }
+            })
+        }
+              
+    </script>
+
+
+    
+</body>
+</html>

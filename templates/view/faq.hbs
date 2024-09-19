@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FAQ </title>
+    <!-- fontawasome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- css -->
+   <link rel="stylesheet" href="css/f&q.css">
+</head>
+<body>
+
+<section>
+    <h1 class="title">FAQ's</h1>
+
+    <div class="questions-container">
+        <div class="question">
+            <button>
+                <span>What is WhatNext ?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam ea odit voluptate culpa quas explicabo.</p>
+
+        </div>
+
+        <div class="question">
+            <button>
+                <span>What should I learn from here ? </span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam ea odit voluptate culpa quas explicabo.</p>
+        </div>
+
+        <div class="question">
+            <button>
+                <span>Can I get a job after taking roadmap from here ? </span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam ea odit voluptate culpa quas explicabo.</p>
+        </div>
+
+        <div class="question">
+            <button>
+                <span>How long will it take to respond ? </span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus corporis pariatur a maiores minus tempore magni nam beatae dolores omnis.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+
+<!-- javascript -->
+
+<script>
+    const buttons = document.querySelectorAll('button');
+
+buttons.forEach( button =>{
+    button.addEventListener('click',()=>{
+        const faq = button.nextElementSibling;
+        const icon = button.children[1];
+
+        faq.classList.toggle('show');
+        icon.classList.toggle('rotate');
+    })
+} )
+</script>

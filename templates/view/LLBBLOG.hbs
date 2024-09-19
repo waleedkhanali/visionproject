@@ -1,0 +1,400 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+h1, 
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+h1{
+  font-size: 2rem;
+  margin: 0;
+}
+a {
+    color: #1792d2;
+}
+
+a:hover,
+a:focus {
+    color: #143774;
+}
+
+strong {
+    font-weight: 700;
+}
+.subtitle{
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1792d2;
+  letter-spacing: 0.05em;
+  font-family: 'Ubuntu Bold', sans-serif;
+}
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+    font-size: .875rem;
+}
+
+.article-read-more {
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+}
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+.article-info {
+    margin: 2em 0;
+}
+header{
+  padding: 2em 0;
+  text-align: center;
+  background: #f0f8ff;
+  font-family: sans-serif;
+  margin-bottom: 3em;
+}
+.container-flex{
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav li{
+  margin: 0 1em;
+}
+nav a{
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700; 
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus{
+  color: #143774;
+  border-bottom: 1px solid black;
+  transition: .3s ease;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+main{
+  max-width: 75%;
+}
+.article-body{
+  width: 100%;
+  text-align: justify;
+}
+.sidebar{
+  max-width: 23%;
+}
+footer {
+    background:#143774;
+    color: white;
+    text-align: center;
+    padding: 3em 0;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: white;
+}
+@media (max-width:1050px){
+  .container-flex{
+    flex-direction: column;
+  }
+  .site-title, .subtitle{
+    width: 100%;
+  }
+  main{
+    max-width: 100%;
+  }
+  .sidebar{
+    max-width: 100%;
+  }
+  
+}
+@media (max-width: 500px){
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+  nav li{
+    margin: 0.5em 0;
+  }
+}
+
+/* articles */
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+@media (min-width: 675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .article-recent-main {
+        width: 68%;
+    }
+    
+    .article-recent-secondary {
+        width: 30%;
+    }
+}
+
+
+  </style>
+  <body>
+    <!-- header starts -->
+    <header>
+      <div class='container container-flex'>
+        <div class='site-title'>
+          <h1>Living The Social Life</h1>
+          <p class='subtitle'>A blog exploring minimalism in life.</p>
+        </div>
+        <nav>
+          <ul>
+            <li> <a href='#' class='current-page'>Home</a> </li>
+            <li> <a href='#'>About Me</a> </li>
+            <li> <a href='#'>Recent Posts</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header> 
+    <!-- header ends -->
+    
+    <!-- container starts -->
+    <div class="container container-flex">
+            <main role="main">
+                
+                <article class="article-featured">
+                    <h2 class="article-title">LLB</h2>
+                    <img src="blogs_image/LAW.jpg" alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+                    <p class="article-info">July 23, 2019 | 3 comments</p>
+                    <p class="article-body"> In Pakistan, the LLB (Bachelor of Laws) is a popular diploma for college students aspiring to go into the legal career. Here are the important thing details about the LLB application in Pakistan:
+
+                        Overview
+                        Duration: Typically 5 years for the incorporated LLB software; formerly, a three-yr LLB application become also offered, however the 5-yr program is now preferred following changes within the legal training framework.
+                        Governing Body: The Pakistan Bar Council (PBC) and Higher Education Commission (HEC) alter criminal education in Pakistan.
+                        Curriculum
+                        
+                        </p>
+                    <a href="#" class="article-read-more">CONTINUE READING</a>
+                </article>
+
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">LAT: </h2>
+                        <p class="article-body">The LAT (Law Admission Test) is an entrance examination used in some countries, including 
+                           Pakistan, <br>
+                           to assess the eligibility of students for admission to LLB programs. Below are the details regarding the LAT: <br>
+
+                          1. Eligibility Criteria <br>
+                          Educational Requirement: Candidates must have completed their Intermediate (12th grade) or equivalent education <br>
+                           to be eligible to apply. <br>
+                          Age Limit: There is no
+                           specific age limit for appearing in the LAT. <br>
+                          2. Test Structure <br>
+                          The LAT exam is usually divided into several sections. The common structure includes: <br>
+                          
+                          Essay Writing (English or Urdu): A 200-word essay to assess the candidate’s writing skills. <br>
+                          Personal Statement (English or Urdu): A short statement to understand the candidate’s motivations and aspirations (usually 200 words).
+                          MCQs: <br>
+                          English: Questions on grammar, vocabulary, sentence structure. <br>
+                          General Knowledge: Covers a wide range of topics including current affairs, history, and geography. <br>
+                          Islamic Studies or Ethics (for Non-Muslims): Questions related to basic Islamic concept  <br>
+                          Pakistan Studies: Questions related to the history, culture, and politics of Pakistan. <br>
+                          Mathematics: Basic arithmetic and mathematical reasoning questions. <br>
+                          3. Scoring and Passing Criteria:   <br>
+                          Total Marks: The LAT is usually out of 100 marks. <br>
+                          Passing Marks: The minimum passing marks are typically 50. However, higher marks are often needed for admission to top law colleges.
+                            
+                        
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/LLB2.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">syllabus </h2>
+                        <p class="article-body">Constitutional Law <br>
+                            Criminal Law <br>
+                            Civil Law <br>
+                            Contract Law <br>
+                            Tort Law <br>
+                            Family Law <br>
+                            Administrative Law <br>
+                            Equity and Trusts <br>
+                            Environmental Law <br>
+                            Islamic Jurisprudence <br>
+                            Admission Requirements: <br>
+                            High School Diploma: Completion of better secondary training (Intermediate or equal) with high-quality grades. <br>
+                            Entry Test: Many universities require an entry take a look at, along with the Law Admission Test (LAT), which is remitted <br>
+                             with the aid of the HEC for admission into the LLB application. <br>
+                            Pathways After LLB <br>
+                            Legal Practice: Graduates must entire a one-yr apprenticeship below a senior attorney and pass the bar exam to be eligible to exercise as advocates.
+                            Judicial Exams: Graduates can take competitive checks to sign up for the judiciary as civil judges or judicial magistrates.
+                            Further Education: Graduates can pursue a Master of Laws (LLM) or other postgraduate ranges for specialization.
+                            Other Careers: An LLB diploma can cause careers in corporate law, academia, public provider, and numerous roles in NGOs and worldwide organizations.
+                            
+                            
+                            
+                        
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/LLB3.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">research oppurtunity </h2>
+                        <p class="article-body">Pathways After LLB <br>
+                            Legal Practice: Graduates must entire a one-yr apprenticeship below a senior attorney and pass the bar <br>
+                             exam to be eligible to exercise as advocates. <br>
+                            Judicial Exams: Graduates can take competitive checks to sign up for the judiciary as civil judges or  <br>
+                            judicial magistrates. <br>
+                            Further Education: Graduates can pursue a Master of Laws (LLM) or other postgraduate ranges for specialization. <br>
+                            Other Careers: An LLB diploma can cause careers in corporate law, academia, public provider, and numerous roles in NGOs and worldwide organizations
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/LLB4.jpg">
+                        <p class="article-info">July 12, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Career Opportunities</h2>
+                        <p class="article-body">
+
+                          Analytical Thinking: Interpreting and studying complicated legal issues. <br>
+                          Research Proficiency: Conducting particular criminal research. <br>
+                          Communication Skills: Drafting legal documents and imparting arguments efficiently. <br>
+                          Problem-Solving: Applying prison understanding to clear up disputes and legal troubles. <br>
+                          Challenges and Considerations <br>
+                          Quality of Education: The nice of legal education can vary substantially throughout establishments, <br>
+                           so it's important to choose a good university. <br>
+                          Professional Training: After completing the LLB, the necessary apprenticeship and bar examination are <br>
+                           essential steps to turning into a training lawyer. <br>
+                          Career Competition: The legal discipline in Pakistan is competitive, so gaining practical revel in and  <br>
+                           constructing a professional network is critical. <br>
+                          The LLB application in Pakistan is a rigorous and complete pathway to coming into the prison career, presenting <br>
+                           graduates with the essential competencies and expertise to reach numerous legal and associated careers. <br>
+                          
+                           <br>
+                            
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a> <br>
+                        <!-- <a href="#" class="article-read-more">top uni</a> -->
+                         <button style="font-size: 35px; align-items: center; justify-content: center;
+                         ">TOP UNIVERSITIES</button>
+                        
+                    </div>
+
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/career1.jpg">
+                        <p class="article-info">July 3, 2019 | 3 comments</p>
+                    </div>
+                </article>
+            </main>
+            
+            <aside class="sidebar">
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">ABOUT ME</h2>
+                    <img src="blogs_image/https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/about-me.jpg" alt="john doe" class="widget-image">
+                    <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">RECENT POSTS</h2>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
+                        <img src="blogs_image/LLB5.jpg" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simplicity and work</h3>
+                        <img src="blogs_image/LLB3.jpg" alt="a chair white chair at a white desk on a white wall" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simple decorations</h3>
+                        <img src="blogs_image/LLB2.jpg" alt="a green plant in a clear, round vase with water in it" class="widget-image">
+                    </div>
+                </div>
+                
+            </aside>
+            
+        </div>
+    <!-- container ends -->
+    
+    <!-- footer starts -->
+    <footer>
+      <p><strong>Living the Simple Life</strong></p>
+      <p>Copyright 2021, <a href='akramnarejo.github.io' target='_blank'>Akram Narejo</a></p>
+      
+    </footer>
+    <!-- footer ends -->
+    
+  </body>
+</html>

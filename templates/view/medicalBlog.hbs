@@ -1,0 +1,525 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+h1, 
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+h1{
+  font-size: 2rem;
+  margin: 0;
+}
+a {
+    color: #1792d2;
+}
+
+a:hover,
+a:focus {
+    color: #143774;
+}
+
+strong {
+    font-weight: 700;
+}
+.subtitle{
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1792d2;
+  letter-spacing: 0.05em;
+  font-family: 'Ubuntu Bold', sans-serif;
+}
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+    font-size: .875rem;
+}
+
+.article-read-more {
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+}
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+.article-info {
+    margin: 2em 0;
+}
+header{
+  padding: 2em 0;
+  text-align: center;
+  background: #f0f8ff;
+  font-family: sans-serif;
+  margin-bottom: 3em;
+}
+.container-flex{
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav li{
+  margin: 0 1em;
+}
+nav a{
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700; 
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus{
+  color: #143774;
+  border-bottom: 1px solid black;
+  transition: .3s ease;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+main{
+  max-width: 75%;
+}
+.article-body{
+  width: 100%;
+  text-align: justify;
+}
+.sidebar{
+  max-width: 23%;
+}
+footer {
+    background:#143774;
+    color: white;
+    text-align: center;
+    padding: 3em 0;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: white;
+}
+@media (max-width:1050px){
+  .container-flex{
+    flex-direction: column;
+  }
+  .site-title, .subtitle{
+    width: 100%;
+  }
+  main{
+    max-width: 100%;
+  }
+  .sidebar{
+    max-width: 100%;
+  }
+  
+}
+@media (max-width: 500px){
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+  nav li{
+    margin: 0.5em 0;
+  }
+}
+
+/* articles */
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+@media (min-width: 675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .article-recent-main {
+        width: 68%;
+    }
+    
+    .article-recent-secondary {
+        width: 30%;
+    }
+}
+
+
+  </style>
+  <body>
+    <!-- header starts -->
+    <header>
+      <div class='container container-flex'>
+        <div class='site-title'>
+          <h1>Living The Social Life</h1>
+          <p class='subtitle'>A blog exploring minimalism in life.</p>
+        </div>
+        <nav>
+          <ul>
+            <li> <a href='#' class='current-page'>Home</a> </li>
+            <li> <a href='#'>About Me</a> </li>
+            <li> <a href='#'>Recent Posts</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header> 
+    <!-- header ends -->
+    
+    <!-- container starts -->
+    <div class="container container-flex">
+            <main role="main">
+                
+                <article class="article-featured">
+                    <h2 class="article-title">Medical Education</h2>
+                    <img src="blogs_image/medical.jpg" alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+                    <p class="article-info">July 23, 2019 | 3 comments</p>
+                    <p class="article-body">
+                        MBBS, which stands for Bachelor oMBBS, which stands for Bachelor of Medicine, Bachelor of Surgery, <br>
+                         is a graduate medical degree awarded to students after completing their medical education. Here are the <br>
+                          details about the MBBS programme: <br>
+
+                        1. Eligibility Criteria <br>
+                        Educational Qualifications: Students must have completed Upper Secondary Education (Class XII) majoring in Physics, Chemistry, and Biology.
+                        Minimum Marks: Normally a minimum of 50% aggregate marks must be obtained in the qualifying examination. However, it may vary by country and institution.
+                        Entrance Examination: In many countries, students are required to pass a competitive entrance examination to gain admission to MBBS programmes. Examples include NEET (National Eligibility cum Entrance Test) in India, MCAT (Medical College Admission Test) in the US, and UCAT (University).
+                        
+                        </p>
+                    <a href="#" class="article-read-more">CONTINUE READING</a>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Important Announcement and Dates </h2>
+                        <p class="article-body">
+                            MDCAT 2024: Dates and Application Procedure <br>
+                            Important Dates
+                            Registration Period: August 15 to 31, 2024 <br>
+                            Exam Dates: <br>
+                            Main Exam: September 5 to 20, 2024 <br>
+                            Special Exam for COVID-19 affected students: September 30, 2024 <br>
+                            Eligibility Criteria <br>
+                            Any person (Pakistani/Overseas Pakistani/Foreign National) is eligible to register for and attempt the MDCAT. <br>
+                            FSC/HSSC/A level results or degrees are not required for MDCAT registration. <br>
+                            A candidate can take the MDCAT exam only once per calendar year. <br>
+                            Application Procedure <br>
+                            Online Registration: <br>
+                            Visit the official MDCAT registration portal. <br>
+                            Create an account and fill in the necessary details. <br>
+                            Fee Payment: <br>
+                            Generate a fee challan after submitting the application. <br>
+                            Pay the fee at designated banks (HBL, ABL, MCB). <br>
+                            Upload a copy of the paid fee challan. <br>
+                            Finalize Submission: <br>
+                            Review all information carefully. <br>
+                            Submit the application electronically. <br>
+                            Schedule Exam (if applicable): <br>
+                            Log in to your account during the scheduling window. <br>
+                            Choose your exam date and time based on availability (first-come, first-served). <br>
+                            Exam Pattern <br>
+                            Total Marks: 210 <br>
+                            Subjects and MCQs: <br>
+                            Biology: 68 MCQs <br>
+                            Chemistry: 56 MCQs <br>
+                            Physics: 56 MCQs <br>
+                            English: 20 MCQs <br>
+                            Logical Reasoning: 10 MCQs <br>
+                            Time: 3.5 hours <br>
+                            No Negative Marking 
+                            
+                        
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/medical1.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">syllabus </h2>
+                        <p class="article-body">Master the Syllabus: Focus on the PMDC-approved syllabus for all subjects. <br>
+                            Conceptual Understanding: Develop a deep understanding of concepts rather than relying on rote memorization. <br>
+                            Strategic Preparation: Utilize textbooks, recommended resources, and practice tests effectively. <br>
+                            Time Management: Practice solving MCQs within the time limit to build speed and accuracy. <br>
+                            Mock Tests: Take advantage of free mock tests to assess your strengths and weaknesses. <br>
+                            Exam Centers <br>
+                            National Venues: Lahore, Karachi, Islamabad, Peshawar, Quetta, and several other cities across Pakistan. <br>
+                            International Venues: Saudi Arabia, UAE, Qatar, Canada, USA, UK, Oman, Bahrain, and Australia. <br>
+                            For more detailed information, you can visit Ilmkidunya and Goal MDCAT​ (ilmkidunya.com)​​ (ilmkidunya.com)​​ (Goal MDCAT)​​ (Edufever.in)​.
+                            
+                            
+                        
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/Earth Layers White Transparent, Blue Earth Science And Technology Computer Layered Material, Material, Blue, Blue Creative PNG Image For Free Download.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">MBBS Required For </h2>
+                        <p class="article-body">Dermatology: <br>
+                            Scope: Diagnosis and remedy of pores and pores and skin, hair, and nail problems. <br>
+                            Education: MBBS   Residency in Dermatology (three years). <br>
+                            Career Paths: Dermatologist, beauty dermatologist, dermatopathologist. <br>
+                            7. Ophthalmology: <br>
+                            Scope: Medical and surgical care of eye situations. <br>
+                            Education: MBBS   Residency in Ophthalmology (three years). <br>
+                            Career Paths: Ophthalmologist, subspecialties like pediatric ophthalmology, neuro-ophthalmology. <br>
+                            8. Radiology: <br>
+                            Scope: Use of imaging strategies to diagnose and deal with ailments. <br>
+                            Education: MBBS   Residency in Radiology (4-5 years). <br>
+                            Career Paths: Diagnostic radiologist, interventional radiologist, nuclear medicinal drug expert. <br>
+                            9. Anesthesiology: <br>
+                            Scope: Pain control and anesthesia care during surgical strategies. <br>
+                            Education: MBBS   Residency in Anesthesiology (four years) <br>
+                            Career Paths: Anesthesiologist, pain medicinal drug professional, critical care anesthesiologist. <br>
+                            10. Pathology: <br>
+                            Scope: Study of disorder through laboratory assessment of frame tissues and fluids. <br>
+                            Education: MBBS   Residency in Pathology (four years). <br>
+                            Career Paths: Pathologist, forensic pathologist, scientific pathologist. <br>
+                            Subspecialties and Other Fields <br>
+                            1. Oncology: <br>
+                            Scope: Diagnosis and treatment of cancer. <br>
+                            Education: MBBS   Residency in Internal Medicine   Fellowship in Oncology (3-five years). <br>
+                            Career Paths: Medical oncologist, surgical oncologist, radiation oncologist. <br>
+                            2. Neurology: <br>
+                            Scope: Diagnosis and treatment of nervous system troubles. <br>
+                            Education: MBBS   Residency in Neurology (three-four years). <br>
+                            Career Paths: Neurologist, subspecialties like pediatric neurology, neurophysiology. <br>
+                            3 Cardiology: <br>
+                            Scope: Diagnosis and remedy of coronary coronary heart and vascular illnesses. <br>
+                            Education: MBBS   Residency in Internal Medicine   Fellowship in Cardiology (3-five years). <br>
+                            Career Paths: Cardiologist, interventional heart specialist, electrophysiologist. <br>
+                            4. Gastroenterology: <br>
+                            Scope: Diagnosis and remedy of digestive device issues. <br>
+                            Education: MBBS   Residency in Internal Medicine   Fellowship in Gastroenterology (3 years). <br>
+                            Career Paths: Gastroenterologist, hepatologist. <br>
+                            5. Nephrology: <br>
+                            Scope: Diagnosis and remedy of kidney sicknesses. <br>
+                            Education: MBBS   Residency in Internal Medicine   Fellowship in Nephrology (2-three years). <br>
+                            Career Paths: Nephrologist, transplant nephrologist. <br>
+                            6. Rheumatology: <br>
+                            Scope: Diagnosis and remedy of rheumatic diseases and autoimmune problems. <br>
+                            Education: MBBS   Residency in Internal Medicine   Fellowship in Rheumatology (2-three years). <br>
+                            Career Paths: Rheumatologist. <br>
+                            7. Endocrinology: <br>
+                            Scope: Diagnosis and remedy of hormone-associated troubles. <br>
+                            Education: MBBS   Residency in Internal Medicine   Fellowship in Endocrinology (2-3 years). <br>
+                            Career Paths: Endocrinologist. <br>
+                            8. Pulmonology: <br>
+                            Scope: Diagnosis and treatment of lung and breathing system issues. <br>
+                            Education: MBBS   Residency in Internal Medicine   Fellowship in Pulmonology (2-three years).
+                            Career Paths: Pulmonologist, important care expert.
+                            9. Orthopedics: <br>
+                            Scope: Diagnosis and remedy of musculoskeletal gadget issues. <br>
+                            Education: MBBS   Residency in Orthopedic Surgery (5 years). <br>
+                            Career Paths: Orthopedic medical doctor, subspecialties like sports activities medicinal drug, joint substitute, spine surgical operation.
+                            Other Medical Fields <br>
+                            1. Emergency Medicine: <br>
+                            Scope: Acute deal with scientific emergencies and trauma. <br>
+                            Education: MBBS   Residency in Emergency Medicine (3-4 years). <br>
+                            Career Paths: Emergency remedy clinical physician. <br>
+                            2. Family Medicine: <br>
+                            Scope: Comprehensive take care of humans and households at some point of every age. <br>
+                            Education: MBBS   Residency in Family Medicine (3 years). <br>
+                            Career Paths: Family medicinal drug health practitioner.3 <br>
+                            3. Geriatrics: <br>
+                            Scope: Health deal with aged populations. <br>
+                            Education: MBBS   Residency in Internal Medicine or Family Medicine   Fellowship in Geriatrics (1-2 years). <br>
+                            Career Paths: Geriatrician. <br>
+                            4. Palliative Care: <br>
+                            Scope: End-of-existence care and symptom management. <br>
+                            Education: MBBS   Residency in applicable strong point   Fellowship in Palliative Care (1-2 years). <br>
+                            Career Paths: Palliative care scientific physician. <br>
+                            5. Public Health: <br>
+                            Scope: Epidemiology, fitness policy, preventive remedy. <br>
+                            Education: MBBS   Master of Public Health (MPH) or relevant schooling. <br>
+                            Career Paths: Public health expert, epidemiologist. <br>
+                            6. Occupational Medicine <br>
+                            Scope: Workplace health and protection. <br>
+                            Education: MBBS   Residency in Occupational Medicine (2-three years). <br>
+                            Career Paths: Occupational medicinal drug health practitioner. <br>
+                            7. Rehabilitation Medicine: <br>
+                            Scope: Physical medication and rehabilitation. <br>
+                            Education: MBBS   Residency in Physical Medicine and Rehabilitation (three-4 years). <br>
+                            Career Paths: Physiatrist. <br>
+                            8. Allergy and Immunology: <br>
+                            Scope: Diagnosis and remedy of allergic illnesses and immune device problems.
+                            Education: MBBS   Residency in Internal Medicine or Pediatrics   Fellowship in Allergy and Immunology (2-three years).
+                            Career Paths: Allergist-immunologist.
+                            9. Transplant Medicine
+                            Scope: Organ transplantation.
+                            Education: MBBS   Residency in applicable distinctiveness   Fellowship in Transplant Medicine (2-3 years).
+                            Career Paths: Transplant physician, transplant health practitioner.
+                            10. Genetics: <br>
+                            Scope: Medical genetics and genetic counseling.
+                            Education: MBBS   Residency in Medical Genetics (2-four years).
+                            Career Paths: Geneticist, genetic counselor.
+                            Emerging Fields <br>
+                            1. Nursing <br>
+                            Scope: Patient care in diverse settings. <br>
+                            Education: Bachelor’s or Master’s diploma in Nursing. <br>
+                            Career Paths: Registered Nurse (RN), Nurse Practitioner (NP), Clinical Nurse Specialist (CNS).
+                            2. Pharmacy: <br>
+                            Scope: Medication management and affected character care. <br>
+                            Education: Doctor of Pharmacy (PharmD). <br>
+                            Career Paths: Clinical Pharmacist, Pharmacothera py Specialist. <br>
+                            Three. Physiotherapy: <br>
+                            Scope: Physical rehabilitation and remedy. <br>
+                            Education: Bachelor’s or Master’s diploma in Physical Therapy.
+                            
+                            
+                        
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/Earth Layers White Transparent, Blue Earth Science And Technology Computer Layered Material, Material, Blue, Blue Creative PNG Image For Free Download.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+
+
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">research oppurtunity </h2>
+                        <p class="article-body">Clinical Research: Focus on patient outcomes, treatment effectiveness, or case studies in a clinical setting. <br>
+                            Basic Science Research: Explore topics related to molecular biology, genetics, or pharmacology that can contribute to medical advancements. <br>
+                            Public Health Research: Investigate population health issues, epidemiology, or preventive medicine. <br>
+                            Medical Education Research: Study methods to improve medical training and education. <br>
+                            2. Literature Review <br>
+                            Conduct a thorough review of existing literature to identify gaps in knowledge. <br>
+                            Use databases like PubMed, Google Scholar, and institutional libraries to gather relevant articles. <br>
+                            3. Formulating a Hypothesis <br>
+                            Based on your literature review, create a clear, testable hypothesis. <br>
+                            Ensure your hypothesis addresses a specific question and can be investigated through your study design.
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/medical3.jpg">
+                        <p class="article-info">July 12, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Career Opportunities</h2>
+                        <p class="article-body">
+
+                             AI Engineer: Developing AI fashions and algorithms <br>
+                             Machine Learning Engineer: Specializing in gadget getting to know strategies <br>
+                             Data Scientist: Analyzing and deciphering massive datasets to tell decision-making <br>
+                             NLP Engineer: Working on language processing structures <br>
+                             Computer Vision Engineer: Developing photo and video evaluation systems <br>
+                             Robotics Engineer: Designing and programming independent robots  <br>
+                            AI Researcher: Conducting research to advance AI technologies <br>
+                            
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a> <br>
+                        <!-- <a href="#" class="article-read-more">top uni</a> -->
+                         <button style="font-size: 35px; align-items: center; justify-content: center;
+                         ">TOP UNIVERSITIES</button>
+                        
+                    </div>
+
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/career1.jpg">
+                        <p class="article-info">July 3, 2019 | 3 comments</p>
+                    </div>
+                </article>
+            </main>
+            
+            <aside class="sidebar">
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">ABOUT ME</h2>
+                    <img src="blogs_image/https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/about-me.jpg" alt="john doe" class="widget-image">
+                    <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">RECENT POSTS</h2>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
+                        <img src="blogs_image/medical4.jpg" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simplicity and work</h3>
+                        <img src="blogs_image/medical5.jpg" alt="a chair white chair at a white desk on a white wall" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simple decorations</h3>
+                        <img src="blogs_image/medical3.jpg" alt="a green plant in a clear, round vase with water in it" class="widget-image">
+                    </div>
+                </div>
+                
+            </aside>
+            
+        </div>
+    <!-- container ends -->
+    
+    <!-- footer starts -->
+    <footer>
+      <p><strong>Living the Simple Life</strong></p>
+      <p>Copyright 2021, <a href='akramnarejo.github.io' target='_blank'>Akram Narejo</a></p>
+      
+    </footer>
+    <!-- footer ends -->
+    
+  </body>
+</html>

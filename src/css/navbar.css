@@ -1,0 +1,456 @@
+@font-face {
+    font-family: myfont;
+    src: url('../fonts/font.woff2 ');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myfont;
+}
+body{
+    background-color: #070606;
+    min-height: 5000px;
+    overflow-x: hidden;
+}
+
+.logo{
+    width: 150px;
+}
+.nav-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px gray;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    min-height: 80px;
+    background-color: #070606;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.23);
+  
+ 
+}
+@keyframes shuffle_nav1 {
+    0%{
+        top: 0%;
+        position: absolute;
+    }
+    49.99%{
+        top: 80px;
+        z-index: -1;
+        position: absolute;
+    }
+    50%{
+        top: 80px;
+        z-index: 1;
+        position: absolute;
+    }
+    99.99%{
+        top: 0%;
+        position: absolute;
+    }
+    100%{
+        z-index: 2;
+        position: sticky;
+        top: 0px;
+       
+
+    }
+    
+}
+.ul-1 #li-1{
+   list-style-type: none;
+   display: inline-block;
+   padding: 10px 20px;
+
+}
+.ul-1 #li-1 #a-1{
+    color: white;
+    text-decoration: none;
+    font-weight: 10px;
+    font-size: 13px;
+
+}
+.ul-1 #li-1 #a-1:hover{
+    font-weight: bolder;
+    transition: .3s;
+}
+.searchbtn{
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 15px;
+    rotate: 0deg;
+    animation-fill-mode: backwards;
+}
+.searchbtn :hover{
+    animation-name: search1;
+  animation-duration: 1s;
+  transition: transform 1s linear;
+  animation-fill-mode: both;
+}
+
+
+@keyframes search1{
+    0% {
+        transform: rotate(0deg);
+    }
+    40%{
+        scale: 2;
+    }
+    80%{
+        scale: 1;
+    }
+
+  100% {
+    transform: rotate(135deg);
+}
+
+}
+.search-btn{
+    animation-name: search2;
+    animation-duration: 1s;
+    transition: transform 1s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes search2{
+    0% {
+        transform: rotate(135deg);
+    }
+    40%{
+        scale: 1;
+    }
+    80%{
+        scale: 2;
+    }
+
+  100% {
+    transform: rotate(0deg);
+}
+
+}
+.active_search{
+    animation-name: search1;
+    animation-duration: 1s;
+    transition: transform 1s linear;
+    animation-fill-mode: both;
+    transform: rotate(135deg);
+}
+input {
+    display: block;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 30px;
+ }
+ input:focus{
+    outline: none;
+ }
+
+ .active {
+    display: block;
+ }
+/* navbar 2 */
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px grey ;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 25px;
+    position: sticky; 
+    top: 0px; 
+    z-index: -1;
+    background-color: #070606;
+    width: 100%;
+    min-height: 80px;
+    /* display: none; */
+}
+@keyframes shuffle_nav {
+    0%{
+        top: 0%;
+        position: sticky;
+    }
+    49.99%{
+        top: 80px;
+        z-index: -1;
+        position: sticky;
+    }
+    50%{
+        top: 80px;
+        z-index: 1;
+        position: sticky;
+    }
+    99.99%{
+        top: 0%;
+        position: sticky;
+    }
+    100%{
+        z-index: 2;
+        position: sticky;
+        top: 0px;
+       
+
+    }
+    
+}
+#logo2{
+    color: white;
+    font-size: 20px;
+}
+#ul-2 #li-2{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 13px;
+
+}
+#ul-2 #li-2 #a-2{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Arial;
+}
+#ul-2 #li-2 #a-2:hover{
+    font-weight: bolder;
+    transition: .3s;
+}
+/*  */
+#ban-h2{
+    color: white;
+    margin-left: 48%;
+    margin-top: 70px;
+    font-size: 15px;
+    font-family: Arial;
+}
+ #para-h1{
+    color: white;
+    margin-left: 28%;
+    margin-top: 20px;
+    font-size: 50px;
+}
+#parah2{
+    color: white;
+    margin-left: 38%;
+    font-size: 45px;
+}
+#bannerpara{
+    color: white;
+    margin-top: 20px;
+    margin-left: 28%;
+    font-size: 20px;
+}
+#bannerbtn1{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+    position: absolute;
+    top: 560px;
+    margin-left: 500px;
+    width: 150px;   
+    height: fit-content; 
+}
+#bannerbtn1:hover{
+    background: transparent;
+    border: 2px solid  white;
+    color: white;
+    cursor: pointer;
+}
+#bannerbtn2{
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+    position: absolute;
+    top: 560px;
+    margin-left: 700px;
+    width: 150px;    
+    background: transparent;
+    border: 2px solid  white;
+    cursor: pointer;
+}
+#bannerbtn2:hover{
+    background-color: white;
+    color: #070606;
+
+
+}
+.main{
+    width: 100%;
+    height: 0%;
+background: rgba(255, 255, 255, 0.23);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.7px);
+-webkit-backdrop-filter: blur(7.7px);
+border: 1px solid rgba(255, 255, 255, 0.14);
+float: left;
+position: absolute;
+left: 0;
+top: 80px;
+
+}
+@keyframes searchbar_open {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+@keyframes searchbar_open1 {
+    0%{
+        height: 100%;
+    }
+    50%{
+        height: 100%;
+    }
+    100%{
+        height: 0%;
+    }
+}
+.banner{
+    margin-top: 200px;
+}
+.main input{
+    width: 0%;
+    font-size: xx-large;    
+    background: transparent;
+}
+@keyframes searchbar {
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+@keyframes searchbar1 {
+    0%{
+        width: 100%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+    
+}
+.video_section{
+    width: 100%;
+    padding-bottom: 150px;
+    border-bottom: 2px solid grey;
+
+}
+.video_section video{
+    width: 100%;
+}
+.section2{
+    width: 100%;
+}
+.section2 .heading{
+    color: #348DC0;
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 100px;
+    font-weight: bold;
+}
+.section2 .heading #span2{
+    color: #575757;
+}
+.section2 .para{
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    line-height: 30px;
+}
+.line_section2{
+    display: block;
+    width: 25%;
+    height: 3px;
+    background-color: #348DC0;
+    border-radius: 30px;
+    margin-left: 37.5%;
+    margin-top: 100px;
+}
+
+.section3{
+    width: 100%;
+    border-top: 2px solid grey;
+    padding-top: 80px;
+    margin-top: 200px;
+}
+.section3 .features{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.section3-main{
+    width: 100%;
+    float: left;
+    padding-top: 50px;
+    min-height: 300vh;
+}
+.section3-main .left{
+    float: left;
+    width: 60%;
+    background-image: url("../images/image.webp");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0% 50%;
+    height: 300vh;
+}
+.section3 .left img{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.section3-main .right{
+    float: left;
+    width: 40%;
+}
+.section3-main .right h2{
+    color: white;
+    padding-top: 100vh;
+    transform: translateX(50vw);
+    animation: 2s anim-section3-heading;
+    animation-fill-mode: forwards;
+   
+}
+@keyframes anim-section3-heading {
+    0%{
+        transform: translateX(50vw);
+    }
+    100%{
+        transform: translateX(0vw);
+
+    }
+
+
+}
+.section3-main .right .point{
+    padding: 12px 14px;
+    color: white;
+}

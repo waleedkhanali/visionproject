@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/student/blogcard.css">
+      <link rel="stylesheet" href="css/student/cards.css">
+      <link rel="stylesheet" href="css/student/notebook.css">
+      <link rel="stylesheet" href="css/student/student.css">
+   
+    
+</head>
+<body>
+    <div class="left">
+        <nav>
+            <ul>
+                <li><a onclick="section_dashboard()">Dashboard</a></li>
+                <li><a href="" onclick="section_mentor()">Mentor</a></li>
+                <li><a href="" onclick="section_classes()">Classes</a></li>
+                <li><a href="" onclick="section_chats()">Chats</a></li>
+                <li><a onclick="section_notebook()">Notebooks</a></li>
+                <li><a href="" onclick="section_subscription()">Subscribtion</a></li>
+                <li><a href="" onclick="section_scholarship()">Scholarships</a></li>
+                <li><a href="" onclick="section_current()">Current events</a></li>
+                <li><a href="" onclick="section_past()">Past events</a></li>
+                <li><a href="" onclick="section_setting()">Settings</a></li>
+                <li><a  onclick="if(confirm('Are you sure you want to logout')){window.location.href = '/logout'}">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="right">
+        <div class="dashboard main_pages" id="dashboard">
+            <h1 class="heading">WELCOME TO DASHBOARD</h1>
+            <section class="courses">
+                <h2>YOUR COURSES</h2>
+                {{!-- CARDS SECTIONS HERE --}}
+                 <div class="card-hover">
+    <div class="card-hover__content">
+      <h3 class="card-hover__title">
+           COMPLETE <span>GRAPHICS DESIGNING</span> COURSE
+      </h3>
+      <p class="card-hover__text">A complete graphics designing course</p>
+      <a href="#" class="card-hover__link">
+        <span>START NOW</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>        
+      </a>
+    </div>
+    <div class="card-hover__extra">
+      <h4>CLICK <span>START NOW</span> TO <span>RESUME</span> the course</h4>
+    </div>
+    <img src="./images/image.jpg" alt="">
+  </div>
+   <div class="card-hover">
+    <div class="card-hover__content">
+      <h3 class="card-hover__title">
+           COMPLETE <span>GRAPHICS DESIGNING</span> COURSE
+      </h3>
+      <p class="card-hover__text">A complete graphics designing course</p>
+      <a href="#" class="card-hover__link">
+        <span>START NOW</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>        
+      </a>
+    </div>
+    <div class="card-hover__extra">
+      <h4>CLICK <span>START NOW</span> TO <span>RESUME</span> the course</h4>
+    </div>
+    <img src="./images/image.jpg" alt="">
+  </div>
+  {{!-- CARDS SECTION ENDS --}}
+            </section>
+             <h2>YOUR MENTOR</h2>
+            <section class="mentor">
+               
+                <section class="mentor">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAREA8QEBAVFRIVFhYVFRUSEhYVFRUWFxUWFRUYHSggGBolHRUVIjEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGhAQGC0lHSUtLS0tLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLSsrLS0tLS0tLS0tLS0tLS0tN//AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAAAQQFBgMCBwj/xABDEAABAwIEAgYGCQEGBwEAAAABAAIRAwQFEiExQVEGImFxgZETMlKhscEHFCNCYpLR4fHwFzM0Q3KCFiRTVKKy0hX/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAjEQEBAAICAwACAgMAAAAAAAAAAQIRAyESMUEiUQQTMmFx/9oADAMBAAIRAxEAPwD62pFLZRlIpbKB7KSZSUgQhCBolJCD0hIJoGhJCBoQglAIXB9wAYMfPyUe9uSKZLTuWjzcB81FykTpNJ5IY+VUOxENaCNj8e1OnijSTlcHRuAdfJU/si3hVwhQbe/DjqC2dpGk8p59ikCtO3x1V5Yrp2Qk10oUoNCSEAhCECQgpIGkhCAQhCAQhCAQhCCIpNLZRVKp7KB7SQUKQIQhAIQEIGhJNAJpIQNRb66yMJAlx0aJiT2ngFGxC9yyAYA3PxWOvsdBcQ2mXxxDoPbxg9yyz5ZOmuHHckmxv353OeQQSc3cQCPBTa2JsLSPWpuHAwQTrPYsTTxlznuaWloMiTp3gc+Oy63LyaZAB1Ej7oGmnwmVy+djp8Np19j4aXDNMZiY5mP1PkuNniDiM4cROmkjfl5brJV2VHVA4iJ0InfmdNdPkrS+uDb0gBmc+OOgjk3T3wq5RaNHTxl4Ia9zy0l0yY0b6oJ466+Skf8AErHslrSTqJA94PBfPRjRLHNhwc4dUukCBruRtMeQXjCSTLcznRGfWCJ0OUDjKt+SusX2jozjbarcjiQ4bZtCeXYVol8c6MVX0rpsB3op1zGTB2mddO9fWsPr56bXc58p090Lp4s9zTm5cNXaShJC2ZBCEIEhCEAhCEAhCEAhCSBoSQghqXT2UMKZT2UD0khCkCaSEDQkhA0IQga8uKaT9kGOxu8EVCWtdrlgzqNRt4LDYxftpt+zDmA8GuI0213jzlXfSuvDy0OytGYnXx232XHDui5uqgzgsaAC72gNw2faIMmNAC0cyvPy7r0MJqK/ophFW964b6NmYSd9Bu2TuTy7NVtLvAWZco2AgLRWFiyixtOm0NYBAAXWrRBWnh0jzkr5zd4KWguE6kabbGRKqMTtqj2BurQTOnwB4d6+o3VAQVlcUpjUBvascsbG2Hjk+aYvZuJa4gyAIO/4YHcDsnhTWyXE7kk8dZMxzEzoe1aW+sHnaRvrAP8ACy130fcx2cZp4wTHjzUzLrVRlx97jUWN2xggZWiOGp274/RX+DdLTb1bei+X06hykDX0c7HsG2iwdPDq2QuZoeMRw1jXVcrS9bXMu9Ix7CZaHcuMcT3QnHuZb2pyzeOtP0VKFmegvSEXlAgn7SlDXaySNgfcVpV6Eu5t59mqaSEKUBCEIBCEkDQkhAIQhAIQhBCCmM2UNu6mt2UAKSChA0JJqQIQhAJpIQNVPSi8NC0rVdeq3YaEkkNaJ4akK1VP0uoh9nVaTAOQf+QUZekz2+eACpUoz1n6COBOn6eUr6Rh9AMYOe57TxKxGAWrfTknhBA5aED3Strb1NFxYzvbvv8Aim51HrVykawUC6vQJWly6Vxw3XqvcTxVNcU5MrtUuAdkqRGsrG3bok0gXAMHRU9el2K9vbtg0Cori+YD6zR3kBVsXjnbsyujgVmekFiKFwKjdG1NwPab+0rUMeHEFpBHMaqn6ZCKLXn7jgfepwZ8npe/RUct5WABh7HF3IQ4R75819XXxH6PL8svqLgeq4PY4DjMQe3n4L7cu3j9PN5PYQhC0UCSEIBCEIBCSEAhCEAhJCCIzdTAVCp7qYFAaEpSQOUSkhSPSEkIGmkhA1nunFQttS6dA5s+9aBZb6Ss31B5aJAc0u/06j4kKuXqrY+4xnQ2+NW6c2fuT5fyt5UvBTHq53nZswI4lx+63bXXsBXy/wCjy4DLhheZqVadQtaNGtbmAaXHeTlPV5QZ1W0vHO+1zOBd6RreqIGQMDmjc7Zz4krk1qu7G7gxjHxT9atlPJjQB3S4OJ79FnamPvqeo5zh+MD4tAj3qqxq9pMObR0E6kiD3E7+CqKePNJADSAdtiPdso7q86+tvh18avVAOeYLeIMT8NV6u7t9NruXfI8SFWYHUzVBqcr2uBjjkLSAfzBSel1N1EDJmY4jLxbuOapZWky2q7i9fExM7D9VAbidcbU4b2QFV4piRaAByHw/dQG405rmtcXTrplEd2p+a1mP+mFzn2tVb3jic2TI6d//AKH3grDHbJ91aVBTaC4tmMzZBGsansKpsNvQ85dJ7BBntadldV7abWoDr1anlJI+KpdrfFT9HVN7b62p1Gua9ry1zXCHAiSJHd8l99XwP6JajRf0jWqS1tOKZdrBjK1s8AJMcphffF18fpwcm9hCElooaSEkDQkiUAhJCBoSQgEIQgh091NCg0t1OUBFKUFJA015TUhoQhAJykhA5UfEG03UntqgGm4ZXA6Ah2ke9d1XdIqOe0uGjc03x3gSPgoyupdLcclykv7fG7XCDZYwynrlL25DwLCMrfcBPbK+gdIMMcSHZstJwaHn2C3Zx7CDBPCG8JIifVW1qlkc01aJpOLjuWub12zx5+C2IEjTRcsvk7rj4XT5Z0h6J27aTml1Tgc0tJOkaGNBrtssXTwPrNp0g5wHEmNuZGy+43WBUjoC5o5Ay3wa6Wt8AFDo4NSpdYADtMeGggT4Sm7+0zHG967VfQvBSHU3VB6jduG8jxJ58GhTOn9uKlN2sREK9sbeATrJP8Kj6ZRAE96rZ+LXDGXJ8nubMvLjlzHXWJcJ7uE8lysrBhcA+k10HfQ8eOvxWkfQa1wMkA8eBjtVjQs2uHAlR5l4oqqFpTB6gaDwcNAO4xBO3Z8ForahNJzPwkeYhc/qYA0KkWQynsVJezLHUY7C7N1pauq/5oId3NzafJffbatnYx/tNa7zAK+OXVm6qTSaZNXLTb/ucBr/AFwX2O2pBjGMGzWtb+UAfJdHBu21zfypJhjP+uspISXS4jlJCEAhCEAhJCBpISQNCSEQiUd1NUKhupqhJFeU0pQNEpIUj0heU0DTXlNA0iJ0OyEpRDNMw1tKs98eqMjfGIPkIVo2tojFHFurWB5cNpjbbVVF5cFreRjbt4rky/G2PRxvnJaMZxptJpgiVR4Tf1Kr21ngupNJIHA6b+cKG6i0/bXEOkn0bD6mh0c7mrehWe4QzLH9fJYzdu66OpNRxrdNQ9zmMa5rtRJBGvYdlnsRxJ0Evdp2rl0gwSsMzmuaHHXQgHnssfdWNdwh73DhBKvZtMzuPqL2ridKo30bagcS4cDorKi51ONy3nv5rGWeGPaQeMq/Fy9uUE+CrlEedvtf+nMLtSqwxxPL4qtoXEtJ4gx+itMLw591NKmWh0FxLtoHDzIVMJbUZ5TXbt0Ttn1LykYGRpDwd9A0kzy60eS+nrLdE+jlS2e6pVc3NBa1rTIExJJ8FqF3cONxx7ef/IzmefXo0JIWrAISQiDSQkiTQkhA0kSiUAhEpII1DdTCVDobqWoHkpL0UkAiUihSg015CaBoQhEmkiVzqXDG+s5o7ygdai14h7Q4dqynSGjkeWjqtIERwEfsVoH4xbt3qjw1VB0lv6NVrXMJJGjtCBlO2vYfiseXVjbhtmShx61L6NMMOobpwVVg+GYkKTh9YYGZiJI6wHeNwrOrc+qAece6PHRXFhdHJqOG2w4aLll1XoY3TKXvRy6IMXNq7vzgnxkrLXmD3jDL3W0cILncVvsVeNSAR4/osxXc1x2cTruVfydN5MLO1DRo3M6PYD2NPzKbbKqa2d9RziAOMAc4C0DS1jT1Q3T+teKhkzKrcmOVlSjWmkIiSdVsvo7qsbVe1zgKjmdUc9ZdHkNFg6To24T3IrYi+jcNNM5XtoiszscHnfvEBOLrLbm5u8LH3xErF4J9I1nVpg3DxQqwDlMkO7WHj3cFNPTqyBALqgB2dlke5dvlHB41p0lFssRo1hmpVGvHYdfJSZVkGhKUIg0kJIk5QkhA0kIQCaSEEe33UsqptsSoz/eN81LOIUvbb5qBJKSjfX6Xtt80vr1L2x5oJJKUqP8AXaftjzQLyn7Y81KEkJrg26Z7Q814urxrGOcCHEcBxQSlxvLptJhe7Ye9VIxp5A6jQeOsqh6SYk6pLc2gB7lneSfF5hVFi/SmvdXPo2VHU6QOzTE95Uy/dUBaGEmQO1YzCqk3DjwBhbM3pDQW6nhpMLG3bWTTtRZ6Jpq3Lw0Rx0Wav+lZunOpWvUosGarVI0DRwbzJVV0qv6ld/oyXRx4+ajY+wWtpSt6YipcubmOxDToPFTIWttasBFMuMMqNa9hO5Dtcp5OEq/p0AWkDSZnnwVNZVG1aTqWk0ahpnmAAHN9xUi3vSyGuJM6d/7wsMo7Mb1sX9jnGhIOunBZW5w2oCTqRqtLeYk0ZgHa76bSeAVXXvgAdQ7eT4a6KsrTagqBw3K9hw8filWeCSfLt7FyDidu3XkpVtd2QTGnCVWYnUBv29luQfFxhWWZtNpJOyzFrcmrWrVjsYY3uCvx/tny2THTndvimR7JMdx3Vxg9aKTSTLYkarO4s6M8cSP3Twp5yLXXW3LvtusHxVzzHqkbZSQfctdb9NH2wHp3h7eR9fwP6r5TSucuokduoXigTVfmcSR2pLZ6R1fb7ha/SBa1Iysqx25R81fYdjVvX/u6jS72SQHeS+BXVR3VZT0J48la4VYsYJDvtPaJIg+Ct/ZZ7RcI+8JL5xgfSGtREOrGuORGg7nHVbHC8eo19Acj/ZPyK0xzlUuFi2lEryhXUekkkIl6QvKEHw92CgbVnjxKDhZ/67/zFdTV7V4NUqq/Tx/+c7/uH/mK5VLZ7T/iH/mK7BxUK9qHMAoOnf6pVO1w/wDMV5NpdDa5f+Yp0qhhWOFWr678oMNGrnHYD9UtTqINnY39R4bTuHkntMDtK3dpbmhRFM1HVH/ec4zJ+QXe1tqduyKe53cdyuNaossstrTGRyuL3K0R+ypbm4pVQ/rkkDXWPcumJPMOaHZZ48hxWfsmZKg0ORxLddN1VKssaZdcPDCQ1pB5rTYcajKdZjzoCXNPYf3WasXtp3Fb0hgA+ccFd4Zihr1XiIp5crQlI44NhorV5I6rTPOT2qp6b3AdfWzeDajPc4Lb4ZRFGm97tzP7BfNukr895SP42/8AsFOPsrQ0sXNri9djj9nWjuzN2PkthmY7kQf6C+Z/SCQLk1GOGZpGxkjsPJXfR3HPSMbJ10lVynW23Fl8XOIYS4a06hjXQ679oVQbOpEEjTtK1dyJaCDwVLcP81m20qza7Sf5TzNbqF1qu8FT4peBswVMx2WyIHSLEiRkZu7RcLan6NjW+J71DosL6md3gpVZ+pWnqac2WXldoGK1NV3w/RoVfdvzPhT8+Rsq19SMvrrXrSQ0KdZ04A1Kq7MaZjuVaUH6KEptq45zpPBT3XeoZsJ14/BV1OoGMniV6o1cjHVDwBPioSvmX7B1GmSBryHepDL0iDtxWbtQQ0H751J7VMNwWtzOjX1RzPtd3IKNJje4d06dTon0rHOyGJGri3mQvY+k239h/wCUrC0Kxa1s7k6+Kn1aVIfcC1wzvpTLCNb/AGmW3sv/ACleh9Jdryd+UrEUm0iTLQuv1al7IWm1fFsv7SrX8X5ShYz6rS9gJqNnijtcmSuQC6MagbSq+sZqKcVA+8UEmkCSABJOgHMrXfVfqlOgz/MqPGc+Ewo/Q/CzP1h7eqPUniefgrDHZe0x6zHBw7ws878Xxn1MrVZGigVrpRGYjLQeCgXdx29oWaz1iNz7tVRYndHO15d1WkZRzXXF7vK5vaFSXNQPABBJDssg7DcKYiu+M0/+Yqd8+am4M7KZ2UbHP8Q7w+C6Ya5Sj61Fd7ngyTlGg7eZWEx1h9OHD7rhHfK3FN0sWWxqhL28gZ8VETWbo4e6pUuqe9QsNVhPGHSR3kE+Sj4Jemk+DprCvMYtXMpNuqZh9NwbHNrpHiP1VDiTJyV26B+p4wZg+/5LX3FJdV9Iw7GMzA07L3VuWrGYTfaDVXTboFYWO3HLcdrlxOyzWMPjfVXpuhsqPF2yZ4beMqYpyXpX4TcElzTw1HdyXa6qwCVDtRlrd7T/AF7kr+pqGrSzeTml6eLRuZ8qRcOzEN4BeaDcjJ4lOkOKXuiXRCm0BPcFFt2rrWqQMo3KrUu+f0j/AMLV2uzLWM9pwnuGvyXK2ZACZM1W9jT7z+yCxtxxOw37l5a/0j859UaALlcv2pjjuurXBo7lC0e31M1Wkwc8x7gravUnUbESFTU+oS4+u7f8I4N+ZVjSd9kzmMw98/NTj7L6R2vhynseq2qesFKpuWyiXmQuGdNEvLSvWZNCKPDnaFcsMoCpWpsOzngHunVCET9fRatYBgDRAGgA4Qqu7qbnmPekhc7VmLqvkOnqu9xUO8xJrWNLgTJyiEIUqqvHbmalH/RKgUTmdHOrR+OqEKYirTGiS9xHEr3hT9UIRP1o7WrDY5SsvUu3Oe/PxJjsQhQV1xbEmU7ZrN3O1jUDQ6SqnD2MdTqsc0QabqjezTrActQChCvPSt9qeyrZNFOZeE8UITKNMbXcXcKPmc7O5x6v6fyhCqnOqynUl5fyOn6LpSbneSUkLSsY71XSY4Be6Y1QhVWTmmBKVATqdymhVEmmUWruvUdy08h/KSEHW1My88dlKa6Icf8AaPmU0KEvNI5jKsWHqx2/EBNCj6t8RartQpAKELojL69hJCEWf//Z" alt="">
+                    <div class="right-courses">
+                        <i class="fa-regular fa-message message-icon"></i>
+                        <h2>MUHAMMAD ALI</h2> 
+                        
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid adipisci dolor aperiam earum dicta itaque odio possimus architecto laboriosam. Exercitationem aperiam est magnam sequi ipsa consequuntur accusantium, quae natus corporis.</p>
+                        <button class="button-courses">GO TO MENTOR PAGE</button>
+
+                    </div>
+                </section>
+            </section>
+            <section class="courses">
+                <h2>DISCOVER MORE</h2>
+                <div class="container">
+  <div class="card"  onclick="window.location.href='/blog3'">
+    <div class="card__header">
+      <img src="blogs_image/Foundation Programme in Computer Science (1).jpg" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-blue">Computer science</span>
+      <h4>Computer science</h4>
+      <p>The Central Superior Services (CSS) examination is a competitive examination in Pakistan performed  <br>
+                        by means of the Federal Public Service Commission (FPSC) for recruitment to posts in diverse federal authorities departments and ministries.</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>Jane Doe</h5>
+          <small>2h ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="card" onclick="window.location.href='/blog2'">
+    <div class="card__header"  style="max-height: 300px; overflow: hidden;">
+      <img src="blogs_image/technology background of software developer.jpg" alt="card__image" class="card__image" width="600" height="600px" style="max-height: 500px;">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-blue">Technology</span>
+      <h4>Artificial Intelligence AI</h4>
+      <p>A Bachelor of Science (BS) in Artificial Intelligence (AI) is an undergraduate degree software that prepares college <br>
+                         students for careers within the hastily evolving subject of AI.</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>Jane Doe</h5>
+          <small>2h ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" onclick="window.location.href='/blog1'">
+    <div class="card__header">
+      <img src="blogs_image/ACCA1.jpg" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-brown">Food</span>
+      <h4>ACCA</h4>
+      <p>IFRS Implementation: Research the impact and challenges of implementing International Financial Reporting Standards <br>
+                             (IFRS) across different industries and regions.</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=2" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>Jony Doe</h5>
+          <small>Yesterday</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" onclick="window.location.href='/blog4'">
+    <div class="card__header">
+      <img src="blogs_image/css1.jpg" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-red">Automobile</span>
+      <h4>CSS Central superior services</h4>
+      <p>The Central Superior Services (CSS) examination is a competitive examination in Pakistan performed  <br>
+                        by means of the Federal Public Service Commission (FPSC) for recruitment to posts in diverse federal authorities departments and ministries.</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=3" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>John Doe</h5>
+          <small>2d ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" onclick="window.location.href='/blog5'">
+    <div class="card__header" style="max-height: 300px; overflow: hidden;">
+      <img src="blogs_image/LAW.jpg" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-brown">LLB</span>
+      <h4>LLB</h4>
+      <p>In Pakistan, the LLB (Bachelor of Laws) is a popular diploma for college students aspiring to go into the legal career. Here are the important thing details about the LLB application in Pakistan</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=2" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>Jony Doe</h5>
+          <small>Yesterday</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" onclick="window.location.href='/blog6'">
+    <div class="card__header">
+      <img src="blogs_image/media4.jpg" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-brown"></span>
+      <h4>media science</h4>
+      <p>A Bachelor of Science (BS) in Media Science is a diploma software that</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=2" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>Jony Doe</h5>
+          <small>Yesterday</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" onclick="window.location.href='/blog7'">
+    <div class="card__header">
+      <img src="blogs_image/medical.jpg" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-brown">Food</span>
+      <h4>Medical Education</h4>
+      <p> MBBS, which stands for Bachelor oMBBS, which stands for Bachelor of Medicine, Bachelor of Surgery</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=2" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>Jony Doe</h5>
+          <small>Yesterday</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" onclick="window.location.href='/blog8'">
+    <div class="card__header">
+      <img src="blogs_image/download2.jpg" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-brown">Food</span>
+      <h4>Software Engineering</h4>
+      <p>A Bachelor of Science (BS) in Artificial Intelligence (AI) is an undergraduate degree software that prepares college</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <img src="https://i.pravatar.cc/40?img=2" alt="user__image" class="user__image">
+        <div class="user__info">
+          <h5>Jony Doe</h5>
+          <small>Yesterday</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="blog-btn">DISCOVER MORE</button>
+            </section>
+        </div>
+        <div class="notebook main_pages" id="notebook">
+        
+              {{>notebook}}
+          <div class="notes" id="note">
+            
+            <div class="nav_space">
+
+            </div>
+           <div class="notebook-right_section" id="notebook_right_section">
+             <div class="notebook-paper">
+  <header>
+    <h1 id="header_h1">ADD TITLE</h1>
+  </header>
+  <div id="content">
+    <div class="hipsum" id="hipsum"><p>WRITE SOME THING...</p>
+  </div>
+</div>
+          </div>
+           </div>
+
+
+          
+     
+    </div>
+    {{!-- connect popup box --}}
+    <div class="connect" id="connect">
+      <div class="list">
+<div class="item" id="item_notebook"></div>
+      </div>
+      <div class="options">
+        <button onclick="create_notebook()">CREATE NEW</button>
+      <button onclick="connectItem()">CONNECT</button>
+      </div>
+    </div>
+<script src="js/student/notebook.js"></script>
+    <script>
+       
+        function section_dashboard(){
+          removeAll();
+          document.getElementById("dashboard").style.display="block";
+        }
+         section_dashboard();
+        
+
+        function section_notebook(){
+           removeAll();
+          document.getElementById("notebook").style.display="block";
+        }
+        function removeAll(){
+          var main_pages = document.querySelectorAll(".main_pages");
+          main_pages.forEach((elem) => {
+            elem.style.display = "none";
+          
+          })
+        }
+
+
+
+    </script>
+      <nav class="notes-nav" style="display: none" id="note-nav">
+              <ul>
+                <li onclick="add_note()"><i class="fa-solid fa-plus"></i>Add</li>
+                <li onclick="delete_note()"><i class="fa-solid fa-trash"></i>Remove</li>
+                <li onclick="scroll_left_col()"><i class="fa-solid fa-arrow-left"></i>Left</li>
+                <li onclick="scroll_right_col()"><i class="fa-solid fa-arrow-right"></i>Right</li>
+                <li onclick="save_note()"><i class="fa-regular fa-floppy-disk"></i>Save</li>
+               
+              </ul>
+            </nav>
+    
+</body>
+</html>

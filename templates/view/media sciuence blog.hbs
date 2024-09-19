@@ -1,0 +1,369 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+h1, 
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+h1{
+  font-size: 2rem;
+  margin: 0;
+}
+a {
+    color: #1792d2;
+}
+
+a:hover,
+a:focus {
+    color: #143774;
+}
+
+strong {
+    font-weight: 700;
+}
+.subtitle{
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1792d2;
+  letter-spacing: 0.05em;
+  font-family: 'Ubuntu Bold', sans-serif;
+}
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+    font-size: .875rem;
+}
+
+.article-read-more {
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+}
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+.article-info {
+    margin: 2em 0;
+}
+header{
+  padding: 2em 0;
+  text-align: center;
+  background: #f0f8ff;
+  font-family: sans-serif;
+  margin-bottom: 3em;
+}
+.container-flex{
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav li{
+  margin: 0 1em;
+}
+nav a{
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700; 
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus{
+  color: #143774;
+  border-bottom: 1px solid black;
+  transition: .3s ease;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+main{
+  max-width: 75%;
+}
+.article-body{
+  width: 100%;
+  text-align: justify;
+}
+.sidebar{
+  max-width: 23%;
+}
+footer {
+    background:#143774;
+    color: white;
+    text-align: center;
+    padding: 3em 0;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: white;
+}
+@media (max-width:1050px){
+  .container-flex{
+    flex-direction: column;
+  }
+  .site-title, .subtitle{
+    width: 100%;
+  }
+  main{
+    max-width: 100%;
+  }
+  .sidebar{
+    max-width: 100%;
+  }
+  
+}
+@media (max-width: 500px){
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+  nav li{
+    margin: 0.5em 0;
+  }
+}
+
+/* articles */
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+@media (min-width: 675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .article-recent-main {
+        width: 68%;
+    }
+    
+    .article-recent-secondary {
+        width: 30%;
+    }
+}
+
+
+  </style>
+  <body>
+    <!-- header starts -->
+    <header>
+      <div class='container container-flex'>
+        <div class='site-title'>
+          <h1>Living The Social Life</h1>
+          <p class='subtitle'>A blog exploring minimalism in life.</p>
+        </div>
+        <nav>
+          <ul>
+            <li> <a href='#' class='current-page'>Home</a> </li>
+            <li> <a href='#'>About Me</a> </li>
+            <li> <a href='#'>Recent Posts</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header> 
+    <!-- header ends -->
+    
+    <!-- container starts -->
+    <div class="container container-flex">
+            <main role="main">
+                
+                <article class="article-featured">
+                    <h2 class="article-title">media science</h2>
+                    <img src="blogs_image/media4.jpg" alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+                    <p class="article-info">July 23, 2019 | 3 comments</p>
+                    <p class="article-body"> A Bachelor of Science (BS) in Media Science is a diploma software that <br>
+                         combines factors of conversation, technology, and media studies. It prepares university college <br>
+                          students for careers in diverse media-related fields through equipping them with theoretical expertise and sensible skills. Here's a pinnacle degree view of what you can assume from the sort of software:
+
+                        </p>
+                    <a href="#" class="article-read-more">CONTINUE READING</a>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">syllabus </h2>
+                        <p class="article-body">Journalism and Reporting: <br>
+                            News Writing and Reporting: Techniques of news gathering, writing, and editing for print, broadcast, <br>
+                            Investigative Journalism: In-depth reporting techniques, including research, interviews, and data analysis. <br>
+                            Feature Writing: Writing long-form articles, profiles, and human-interest stories for magazines and online platforms. <br>
+                            3. Digital Media and Communication <br>
+                            Digital Media Production: Basics of digital content creation, including video production, editing, and multimedia storytelling. <br>
+                            Social Media Strategies: Understanding the role of social media in modern communication, including content creation, analytics, and <br>
+                            Web Design and Development: Fundamentals of web design, HTML/CSS, and content management systems (CMS) for media professionals. <br>
+                            Data Journalism and Infographics: Using data visualization and infographics to tell stories and present information. <br>
+                            4. Advertising and Public Relations: <br>
+                            Introduction to Advertising: Principles and practices of advertising, including copywriting, campaign planning, and media buying. <br>
+                            Public Relations Strategies: Techniques for managing public perception, crisis communication, and building media relations. <br>
+                            5. Film and Television Studies: <br>
+                            Introduction to Film Studies: Analysis of film as a medium, including genres, narrative techniques, and the history of cinema. <br>
+                            Television Production: Hands-on experience in producing television content, including studio production, directing, and editing. <br>
+                            Scriptwriting: Writing scripts for film, television, and other media formats, focusing on structure, dialogue, and character development. <br>
+                            Documentary Production: Techniques for creating documentary films, including research, shooting, and editing. <br>
+                            6. Photography and Visual Communication: <br>
+                            Introduction to Photography: Basics of photography, including composition, lighting, and digital editing. <br>
+                            Visual Communication: Study of how images and visual content communicate messages and influence audiences. <br>
+                            7. Media Management and Entrepreneurship: <br>
+                            Media Management: Understanding the business side of media, including management of media organizations, budgeting, and marketing. <br>
+                            Entrepreneurship in Media: Exploring opportunities for starting media-related businesses, such as digital content creation, online platforms, and production houses.
+                            
+                        
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/media1.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">research oppurtunity </h2>
+                        <p class="article-body">Emerging Media Technologies: Students find out new and rising technologies in the media landscape, together with digital <br>
+                             reality, augmented fact, and synthetic intelligence.
+
+                            Electives and Specializations <br>
+                            Many applications provide non-compulsory courses and specializations to permit college students to tailor their education to  <br>
+                            their hobbies and career goals. Possible regions of specialization include: <br>
+                            
+                            Journalism <br>
+                            Public Relations <br>
+                            Advertising <br>
+                            Film and Television Production <br>
+                            Interactive Media <br>
+                            Game Design
+                            
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/media2.jpg">
+                        <p class="article-info">July 12, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Career Opportunities</h2>
+                        <p class="article-body">Graduates with a BS in Media Science can pursue numerous profession paths, together with: <br>
+
+                            Media Planner <br>
+                            Content Creator <br>
+                            Social Media Manager <br>
+                            Public Relations Specialist <br>
+                            Journalist <br>
+                            Film and Video Editor <br>
+                            Digital Marketing Specialist <br>
+                            Broadcast Technician <br>
+                            Skills Developed <br>
+                            Technical Skills: Proficiency in media production software (e.G., Adobe Creative Suite), video and audio enhancing <br>
+                             tools, net layout structures, and social media analytics tools. <br>
+                            Analytical Skills: Ability to investigate media content material and goal market statistics to tell media techniques <br>
+                             and content material advent. <br>
+                            Creative Skills: Strong innovative skills in storytelling, seen format, and content cloth creation. <br>
+                            Communication Skills: Excellent written and verbal verbal exchange talents, vital for growing and handing <br>
+                             over powerful media messages.
+                            
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a> <br>
+                        <!-- <a href="#" class="article-read-more">top uni</a> -->
+                         <button style="font-size: 35px; align-items: center; justify-content: center;
+                         ">TOP UNIVERSITIES</button>
+                        
+                    </div>
+
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/career1.jpg">
+                        <p class="article-info">July 3, 2019 | 3 comments</p>
+                    </div>
+                </article>
+            </main>
+            
+            <aside class="sidebar">
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">ABOUT ME</h2>
+                    <img src="blogs_image/https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/about-me.jpg" alt="john doe" class="widget-image">
+                    <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">RECENT POSTS</h2>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
+                        <img src="blogs_image/media3.jpg" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simplicity and work</h3>
+                        <img src="blogs_image/media5.jpg" alt="a chair white chair at a white desk on a white wall" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simple decorations</h3>
+                        <img src="blogs_image/media6.jpg" alt="a green plant in a clear, round vase with water in it" class="widget-image">
+                    </div>
+                </div>
+                
+            </aside>
+            
+        </div>
+    <!-- container ends -->
+    
+    <!-- footer starts -->
+    <footer>
+      <p><strong>Living the Simple Life</strong></p>
+      <p>Copyright 2021, <a href='akramnarejo.github.io' target='_blank'>Akram Narejo</a></p>
+      
+    </footer>
+    <!-- footer ends -->
+    
+  </body>
+</html>

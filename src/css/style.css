@@ -1,0 +1,179 @@
+@font-face {
+  font-family: myfonts;
+  src: url(../fonts/font.woff2);
+}
+html{
+  scroll-behavior: smooth;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: myfonts;
+}
+body{
+  height: 9999999vh;
+}
+
+.section4{
+  width: 100%;
+  float: left;
+  margin-top: 100px;
+  
+}
+
+
+.reviews{
+  width: 100%;
+  height: 500px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+/* now creating an animation for next section */
+body{
+  position: relative;
+  overflow-x: scroll;
+}
+
+
+.carosel .item{
+width: 100%;
+background-color: #070606;
+}
+.carosel .item .img{
+  width: 200px;
+  
+}
+.carosel .item .review{
+  padding-top: 50px;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.carosel .item .name{
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: block;
+  padding-top: 30px;
+}
+.carosel .item .work{
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: block;
+  
+}
+.carosel .item .button{
+  padding: 12px 14px;
+  border-radius: 10%;
+  font-weight: bold;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  margin-top: 30px;
+}
+.carosel .div2{
+  width: 100%;
+  height: 50vh;
+  background-color: blue;
+}
+.carosel .div3{
+  width: 100%;
+  height: 50vh;
+  background-color: purple;
+}
+#span1 span{
+  transition: 2s ease all;
+}
+.wavy {
+  animation-name: wavy;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+
+}
+@keyframes wavy {
+  0% {
+    top: 0px;
+    
+  }
+  50% {
+    top: -15px;
+  
+  }
+  100% {
+    top: 0px;
+   
+    
+  }
+}
+.section2 .heading #span2{
+ 
+  background-color: #070606;
+  
+    text-align: center;
+    color: #68d0e0;
+    
+    font-weight: bold;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: url(../images/text-background1.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    
+    
+  }
+  .img-magnifier-container {
+    position: relative;
+    width: 200px;
+    margin-left: calc(50% - 100px);
+  }
+  .img-magnifier-glass {
+    position: absolute;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 100px;
+    height: 100px;
+  }  
+  
+
+.img-magnifier-glass {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+ 
+}
+
+
+@keyframes morph {
+  0% {
+			border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+
+	} 
+	
+	50% {
+			border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+
+	}
+  
+	100% {
+		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+		
+	} 
+}
+
+
+

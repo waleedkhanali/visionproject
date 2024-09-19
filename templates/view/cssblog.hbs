@@ -1,0 +1,439 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+h1, 
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+h1{
+  font-size: 2rem;
+  margin: 0;
+}
+a {
+    color: #1792d2;
+}
+
+a:hover,
+a:focus {
+    color: #143774;
+}
+
+strong {
+    font-weight: 700;
+}
+.subtitle{
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1792d2;
+  letter-spacing: 0.05em;
+  font-family: 'Ubuntu Bold', sans-serif;
+}
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+    font-size: .875rem;
+}
+
+.article-read-more {
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+}
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+.article-info {
+    margin: 2em 0;
+}
+header{
+  padding: 2em 0;
+  text-align: center;
+  background: #f0f8ff;
+  font-family: sans-serif;
+  margin-bottom: 3em;
+}
+.container-flex{
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav li{
+  margin: 0 1em;
+}
+nav a{
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700; 
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus{
+  color: #143774;
+  border-bottom: 1px solid black;
+  transition: .3s ease;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+main{
+  max-width: 75%;
+}
+.article-body{
+  width: 100%;
+  text-align: justify;
+}
+.sidebar{
+  max-width: 23%;
+}
+footer {
+    background:#143774;
+    color: white;
+    text-align: center;
+    padding: 3em 0;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: white;
+}
+@media (max-width:1050px){
+  .container-flex{
+    flex-direction: column;
+  }
+  .site-title, .subtitle{
+    width: 100%;
+  }
+  main{
+    max-width: 100%;
+  }
+  .sidebar{
+    max-width: 100%;
+  }
+  
+}
+@media (max-width: 500px){
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+  nav li{
+    margin: 0.5em 0;
+  }
+}
+
+/* articles */
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+@media (min-width: 675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .article-recent-main {
+        width: 68%;
+    }
+    
+    .article-recent-secondary {
+        width: 30%;
+    }
+}
+
+
+  </style>
+  <body>
+    <!-- header starts -->
+    <header>
+      <div class='container container-flex'>
+        <div class='site-title'>
+          <h1>Living The Social Life</h1>
+          <p class='subtitle'>A blog exploring minimalism in life.</p>
+        </div>
+        <nav>
+          <ul>
+            <li> <a href='#' class='current-page'>Home</a> </li>
+            <li> <a href='#'>About Me</a> </li>
+            <li> <a href='#'>Recent Posts</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header> 
+    <!-- header ends -->
+    
+    <!-- container starts -->
+    <div class="container container-flex">
+            <main role="main">
+                
+                <article class="article-featured">
+                    <h2 class="article-title">CSS Central superior services</h2>
+                    <img src="blogs_image/css1.jpg" alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+                    <p class="article-info">July 23, 2019 | 3 comments</p>
+                    <p class="article-body">The Central Superior Services (CSS) examination is a competitive examination in Pakistan performed  <br>
+                        by means of the Federal Public Service Commission (FPSC) for recruitment to posts in diverse federal authorities departments and ministries. Here are the entire details:
+
+                    Eligibility Criteria: <br>
+                        Nationality: Must be a citizen of Pakistan or a permanent resident of the country of Jammu and Kashmir. <br>
+                        Age Limit: <br>
+                        General candidates: 21 to 30 years. <br>
+                        There is a relaxation of up to 2 years (32 years) for applicants from positive regions and authorities <br>
+                         employees.
+                        Education: A bachelor’s degree (14 years of education) from a recognized university.
+                        
+                        
+                        </p>
+                    <a href="#" class="article-read-more">CONTINUE READING</a>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">syllabus </h2>
+                        <p class="article-body">Compulsory Subjects (600 Marks) <br>
+                            Each obligatory subject carries a hundred marks. These subjects are obligatory for all candidates.
+                            
+                            English Essay (100 Marks) <br>
+                            
+                            Candidates are required to write an essay on one of the given subjects, demonstrating their capacity to offer ideas absolutely and coherently.
+                            English (Precis and Composition) (a hundred Marks) <br>
+                            
+                            Includes specific writing, comprehension, grammar, and composition. <br>
+                            General Science and Ability (one hundred Marks) <br>
+                            
+                            Covers simple clinical principles and ideas, and tests analytical capacity and trouble-solving talents.
+                            Current Affairs (a hundred Marks) <br>
+                    
+                            Pakistan Affairs (a hundred Marks) <br>
+                            
+                            Covers Pakistan's records, tradition, economic system, and political and social structure. <br>
+                            Islamic Studies OR Comparative Study of Major Religions (for Non-Muslims) (100 Marks) <br>
+                            
+                            Islamic Studies: Covers the basics of Islam, its records, and standards. <br>
+                            Comparative Study of Major Religions: For non-Muslims, covering major global religions. <br>
+                            Optional Subjects (600 Marks) <br>
+                    
+                            Group 1: (One subject of 2 hundred marks may be opted) <br>
+                            Accountancy and Auditing (two hundred marks) <br>
+                            Economics (200 marks) <br>
+                            Business Administration (two hundred marks) <br>
+                            Public Administration (2 hundred marks) <br>
+                            Group 2: (One problem of 200 marks can be opted) <br>
+                            Political Science (200 marks) <br>
+                            International Relations (200 marks) <br>
+                            Governance and Public Policies (2 hundred marks) <br>
+                            Comparative Politics (two hundred marks) <br>
+                            Group three: (One subject of one hundred marks may be opted) <br>
+                            Pure Mathematics (100 marks) <br>
+                            Applied Mathematics (one hundred marks) <br>
+                            Computer Science (one hundred marks) <br>
+                            Statistics (one hundred marks) <br>
+                            Group four: (One difficulty of a hundred marks can be opted) <br>
+                            Physics (two hundred marks) <br>
+                            Geology (one hundred marks) <br>
+                            Geography (100 marks) <br>
+                            Group five: (One situation of a hundred marks may be opted) <br>
+                            Chemistry (2 hundred marks) <br>
+                            Botany (100 marks) <br>
+                            Zoology (one hundred marks) <br>
+                            Environmental Science (100 marks) <br>
+                            Group 6: (One concern of one hundred marks can be opted) <br>
+                            Islamic History and Culture (a hundred marks) <br>
+                            Indo-Pak History (a hundred marks) <br>
+                            British History (a hundred marks) <br>
+                            European History (100 marks) <br>
+                            History of the us (100 marks) <br>
+                            Group 7: (One situation of one hundred marks can be opted)  <br>
+                            Law (2 hundred marks) <br>
+                            Constitutional Law (a hundred marks) <br>
+                            International Law (100 marks) <br>
+                            Muslim Law and Jurisprudence (100 marks) <br>
+                            Group 8: (One challenge of one hundred marks can be opted) <br>
+                            Philosophy (one hundred marks) <br>
+                            Psychology (a hundred marks) <br>
+                            Sociology (a hundred marks) <br>
+                            Anthropology (one hundred marks) <br>
+                            Social Work (a hundred marks) <br>
+                            Group nine: (One challenge of one hundred marks can be opted) <br> 
+                            Agriculture and Forestry (one hundred marks) <br>
+                            Veterinary Science (a hundred marks) <br>
+                            Botany (100 marks) <br>
+                            Zoology (a hundred marks) <br>
+                            Group 10: (One challenge of a hundred marks may be opted) <br>
+                            Urdu Literature (a hundred marks) <br>
+                            English Literature (a hundred marks) <br>
+                            Persian Literature (100 marks) <br>
+                            Arabic Literature (a hundred marks) <br>
+                            Group 11: (One issue of 100 marks may be opted) <br>
+                            Regional Languages (100 marks each) <br>
+                            Punjabi <br>
+                            Sindhi <br>
+                            Pashto <br>
+                            Balochi <br>
+                            Important Considerations <br>
+                            Candidates ought to pick best one situation from every organization.
+                            The general marks for elective subjects have to be 600.
+                            
+
+                            
+                            
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/css2.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Further Process</h2>
+                        <p class="article-body"> Medical Examination:  <br>
+                            Candidates who qualify the written examination have to undergo a medical exam to ensure they're bodily in shape for the civil service roles. <br>
+                            
+                            3. Psychological Assessment: <br>
+                            This assessment includes psychological checks and an interview with psychologists to evaluate the candidate's mental skills, persona traits, and <br>
+                             suitability for civil offerings. <br>
+                            
+                            Four. Viva Voce (Interview): <br>
+                            Candidates who clear the psychological evaluation appear for an interview (viva voce) carried out by way of a panel. The interview incorporates <br>
+                             three hundred marks and assessments the candidate's intellectual and ethical integrity, sensible knowledge, and know-how of country wide and global issues.
+                            
+                            Application Process: <br>
+                            Announcement: The FPSC proclaims the CSS exam schedule annually. <br>
+                            Registration: Candidates want to sign up online on the FPSC internet site and submit the software shape. <br>
+                            Fee Payment: The application rate have to be paid in targeted banks. <br>
+                            Documents Submission: Candidates should post the required files in conjunction with a broadcast copy of the net application to the FPSC. <br>
+                            Preparation Tips: <br>
+                            Understand the Syllabus: Thoroughly go through the syllabus of each obligatory and optionally available topics. <br>
+                            Reading Material: Use endorsed books, journals, newspapers, and on line resources. <br>
+                            Time Management: Create a examine agenda that covers all topics and lets in time for revision. <br>
+                            Practice: Solve beyond papers and take mock checks to make yourself familiar with the examination pattern. <br>
+                            Stay Updated: Keep abreast of present day affairs, both national and global.
+                            
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/css4.jpg">
+                        <p class="article-info">July 12, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Career Opportunities</h2>
+                        <p class="article-body">Pakistan Administrative Service (PAS) <br>
+                            Police Service of Pakistan (PSP) <br>
+                            Foreign Service of Pakistan (FSP) <br>
+                            Inland Revenue Service (IRS) <br>
+                            Pakistan Customs Service (PCS) <br>
+                            Pakistan Audit and Accounts Service (PAAS) <br>
+                            Military Lands and Cantonments Group (MLCG) <br>
+                            Office Management Group (OMG) <br>
+                            Railways (Commercial & Transportation) Group
+
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a> <br>
+                        <!-- <a href="#" class="article-read-more">top uni</a> -->
+                         <button style="font-size: 35px; align-items: center; justify-content: center;
+                         ">TOP UNIVERSITIES</button>
+                        
+                    </div>
+
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/career1.jpg">
+                        <p class="article-info">July 3, 2019 | 3 comments</p>
+                    </div>
+                </article>
+            </main>
+            
+            <aside class="sidebar">
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">ABOUT ME</h2>
+                    <img src="blogs_image/https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/about-me.jpg" alt="john doe" class="widget-image">
+                    <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">RECENT POSTS</h2>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
+                        <img src="blogs_image/css4.jpg" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simplicity and work</h3>
+                        <img src="blogs_image/CSS5.jpg" alt="a chair white chair at a white desk on a white wall" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simple decorations</h3>
+                        <img src="blogs_image/css3.jpg" alt="a green plant in a clear, round vase with water in it" class="widget-image">
+                    </div>
+                </div>
+                
+            </aside>
+            
+        </div>
+    <!-- container ends -->
+    
+    <!-- footer starts -->
+    <footer>
+      <p><strong>Living the Simple Life</strong></p>
+      <p>Copyright 2021, <a href='akramnarejo.github.io' target='_blank'>Akram Narejo</a></p>
+      
+    </footer>
+    <!-- footer ends -->
+    
+  </body>
+</html>

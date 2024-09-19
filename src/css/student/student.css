@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+:root {
+--primary_color: #070606;
+--secondry_color: white;
+}
+body{
+    background-color: var(--primary_color);
+}
+.left{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+   
+}
+.left ul{
+    padding-top: 20px;
+}
+.left ul li{
+    list-style: none;
+    padding: 12px 14px;
+}
+.left ul li a{
+    color:   var(--secondry_color) ;
+    text-decoration: none;
+}
+.right{
+    width: 80%;
+    margin-left: 20%;
+    padding-left: 5%;
+    background-color: white;
+    float: left;
+
+}
+.courses {
+    width: 100%;
+    float: left;
+}
+.courses h2{
+    padding-top: 50px;
+}
+.mentor{
+    width: 100%;
+    float: left;
+   
+
+}
+.mentor h2{
+    color: var(--primary_color);
+    
+}
+.mentor img{
+    width: 30%;
+    float: left;
+
+}
+.mentor .right-courses{
+    width: 70%;
+    float: left;
+    padding: 12px 14px;
+}
+.mentor .right-courses h2{
+    font-size: 30px;            
+}
+ .mentor .right-courses p{
+    margin-top: 30px;
+    max-width: 90%;
+ }
+ .button-courses{
+    padding: 12px 14px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+ }
+ .message-icon{
+    float: inline-end;
+    margin-right: 50px;
+    color: blue;
+    font-size: 25px;
+    padding: 12px 14px;
+   
+ }
+
+ .heading{
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+ }
+
+ .blog-btn{
+    padding: 12px 14px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 25%;
+    margin-left: 37.5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+ .notebook{
+    min-height: 100vh;
+ }

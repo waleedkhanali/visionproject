@@ -1,0 +1,370 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+h1, 
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+h1{
+  font-size: 2rem;
+  margin: 0;
+}
+a {
+    color: #1792d2;
+}
+
+a:hover,
+a:focus {
+    color: #143774;
+}
+
+strong {
+    font-weight: 700;
+}
+.subtitle{
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1792d2;
+  letter-spacing: 0.05em;
+  font-family: 'Ubuntu Bold', sans-serif;
+}
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+    font-size: .875rem;
+}
+
+.article-read-more {
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+}
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+.article-info {
+    margin: 2em 0;
+}
+header{
+  padding: 2em 0;
+  text-align: center;
+  background: #f0f8ff;
+  font-family: sans-serif;
+  margin-bottom: 3em;
+}
+.container-flex{
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav li{
+  margin: 0 1em;
+}
+nav a{
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700; 
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus{
+  color: #143774;
+  border-bottom: 1px solid black;
+  transition: .3s ease;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+main{
+  max-width: 75%;
+}
+.article-body{
+  width: 100%;
+  text-align: justify;
+}
+.sidebar{
+  max-width: 23%;
+}
+footer {
+    background:#143774;
+    color: white;
+    text-align: center;
+    padding: 3em 0;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: white;
+}
+@media (max-width:1050px){
+  .container-flex{
+    flex-direction: column;
+  }
+  .site-title, .subtitle{
+    width: 100%;
+  }
+  main{
+    max-width: 100%;
+  }
+  .sidebar{
+    max-width: 100%;
+  }
+  
+}
+@media (max-width: 500px){
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+  nav li{
+    margin: 0.5em 0;
+  }
+}
+
+/* articles */
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+@media (min-width: 675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .article-recent-main {
+        width: 68%;
+    }
+    
+    .article-recent-secondary {
+        width: 30%;
+    }
+}
+
+
+  </style>
+  <body>
+    <!-- header starts -->
+    <header>
+      <div class='container container-flex'>
+        <div class='site-title'>
+          <h1>WHATSNEXT</h1>
+          <p class='subtitle'>A blog exploring minimalism in life.</p>
+        </div>
+        <nav>
+          <ul>
+            <li> <a href='#' class='current-page'>Home</a> </li>
+            <li> <a href='#'>About Me</a> </li>
+            <li> <a href='#'>Recent Posts</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header> 
+    <!-- header ends -->
+    
+    <!-- container starts -->
+    <div class="container container-flex">
+            <main role="main">
+                
+                <article class="article-featured">
+                    <h2 class="article-title">ACCA</h2>
+                    <img src="blogs_image/ACCA1.jpg" alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+                    <p class="article-info">July 23, 2019 | 3 comments</p>
+                    <p class="article-body">The ACCA (Association of Chartered Certified Accountants) is a globally diagnosed professional accounting qualification. Here are the important thing information about pursuing the ACCA:
+
+                        Overview
+                        Full Name: Association of Chartered Certified Accountants
+                        Founded: 1904
+                        Headquarters: London, United Kingdom
+                        Global Reach: ACCA is diagnosed in over 180 nations
+                        Structure and Duration
+                        Number of Exams: thirteen tests divided into three levels
+                        Duration: Typically 3 to four years, depending at the pace at which assessments are finished
+                        Experience Requirement: three years of relevant realistic enjoy
+                        Ethics Module: Professional Ethics Module is obligatory
+                        Exam Levels
+                        
+
+                        </p>
+                    <a href="#" class="article-read-more">CONTINUE READING</a>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">syllabus </h2>
+                        <p class="article-body">Business and Technology (BT) <br>
+                            Management Accounting (MA) <br>
+                            Financial Accounting (FA) <br>
+                            Applied Skills: <br>
+                            
+                            Corporate and Business Law (LW) <br>
+                            Performance Management (PM) <br>
+                            Taxation (TX) <br>
+                            Financial Reporting (FR) <br>
+                            Audit and Assurance (AA) <br>
+                            Financial Management (FM) <br>
+                            Strategic Professional: <br>
+                            
+                            Essentials (both required): <br>
+                            Strategic Business Leader (SBL) <br>
+                            Strategic Business Reporting (SBR) <br>
+                            Options (pick out ): <br>
+                            Advanced Financial Management (AFM) <br>
+                            Advanced Performance Management (APM) <br>
+                            Advanced Taxation (ATX) <br>
+                            Advanced Audit and Assurance (AAA) <br>
+                            Admission Requirements <br>
+                            Minimum Entry Requirements: <br>
+                            2 A Levels and three GCSEs in 5 separate subjects, such as English and Mathematics, or equal qualifications.
+                            Foundation Level: Students who do not meet the minimum access requirements can start at the Foundation degree (ACCA Diploma in Accounting and Business) after which progress to the ACCA Qualification.
+                            Study Options
+                            Self-Study: Using ACCA-permitted study substances and resources.
+                            Tuition Providers: Enroll in publications presented by means of ACCA-accepted studying carriers, which can be classroom-based totally or online.
+                            Costs
+                            Initial Registration Fee: Around £seventy nine (GBP)
+                            Annual Subscription Fee: Around £112 (GBP)
+                            Exam Fees: Varies by means of level and area; usually between £a hundred and £200 according to examination.
+                            
+                            
+                        
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/ACCA5.jpg">
+                        <p class="article-info">July 19, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">research oppurtunity </h2>
+                        <p class="article-body">IFRS Implementation: Research the impact and challenges of implementing International Financial Reporting Standards <br>
+                             (IFRS) across different industries and regions. <br>
+                            Sustainability Reporting: Explore how businesses integrate environmental, social, and governance (ESG) factors into financial reporting. <br>
+                            Fair Value Accounting: Analyze the effects of fair value accounting on financial statements and decision-making. <br>
+                            Cost Management Techniques: Research innovative cost management strategies and their impact on business profitability. <br>
+                            International Taxation: Examine the challenges and opportunities of international tax regimes, including transfer pricing and tax treaties. <br>
+Digital Economy and Taxation: Investigate how the digital economy impacts taxation, including issues related to e-commerce, cryptocurrencies, and digital service
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/ACCA2.jpg">
+                        <p class="article-info">July 12, 2019 | 3 comments</p>
+                    </div>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Career Opportunities</h2>
+                        <p class="article-body">
+
+                            Roles: Financial Accountant, Management Accountant, Auditor, Tax Specialist, Financial Analyst, Finance Manager, CFO
+                            Industries: Public accounting firms, company finance departments, economic offerings, authorities, and non-income agencies.
+                            
+                            
+                            </p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a> <br>
+                        <!-- <a href="#" class="article-read-more">top uni</a> -->
+                         <button style="font-size: 35px; align-items: center; justify-content: center;
+                         ">TOP UNIVERSITIES</button>
+                        
+                    </div>
+
+                    <div class="article-recent-secondary">
+                        <img src="blogs_image/career1.jpg">
+                        <p class="article-info">July 3, 2019 | 3 comments</p>
+                    </div>
+                </article>
+            </main>
+            
+            <aside class="sidebar">
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">ABOUT ME</h2>
+                    <img src="blogs_image/https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/about-me.jpg" alt="john doe" class="widget-image">
+                    <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h2 class="widget-title">RECENT POSTS</h2>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
+                        <img src="blogs_image/ACCA3.jpg" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simplicity and work</h3>
+                        <img src="blogs_image/ACCA4.jpg" alt="a chair white chair at a white desk on a white wall" class="widget-image">
+                    </div>
+                    <div class="widget-recent-post">
+                        <h3 class="widget-recent-post-title">Simple decorations</h3>
+                        <img src="blogs_image/ACCA5.jpg" alt="a green plant in a clear, round vase with water in it" class="widget-image">
+                    </div>
+                </div>
+                
+            </aside>
+            
+        </div>
+    <!-- container ends -->
+    
+    <!-- footer starts -->
+    <footer>
+      <p><strong>Living the Simple Life</strong></p>
+      <p>Copyright 2021, <a href='akramnarejo.github.io' target='_blank'>Akram Narejo</a></p>
+      
+    </footer>
+    <!-- footer ends -->
+    
+  </body>
+</html>
